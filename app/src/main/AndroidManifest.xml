@@ -12,6 +12,7 @@
         android:label="@string/app_name"
         android:supportsRtl="true"
         android:theme="@style/Theme.TPO1"
+        android:usesCleartextTraffic="true"
         tools:targetApi="31">
 
         <meta-data
@@ -32,8 +33,7 @@
             android:name=".MainActivity"
             android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/Theme.TPO1.NoActionBar">
-        </activity>
+            android:theme="@style/Theme.TPO1.NoActionBar"></activity>
 
     </application>
 

@@ -26,7 +26,6 @@ public class ApiClient {
             api = new ApiClient();
         }
         return api;
-
     }
 
 

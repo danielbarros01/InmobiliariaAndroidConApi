@@ -12,5 +12,9 @@
             android:id="@+id/nav_perfil"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="@string/menu_perfil" />
+        <item
+            android:id="@+id/nav_inmuebles"
+            android:icon="?attr/actionModeSelectAllDrawable"
+            android:title="@string/menu_inmuebles" />
     </group>
 </menu>

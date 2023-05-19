@@ -12,6 +12,7 @@ public class PerfilViewModel extends ViewModel {
     private MutableLiveData<String> textBtn;
     private MutableLiveData<Propietario> propietario;
 
+
     public void editarOGuardar(String btnText, Propietario p){
         if(btnText.equals("Editar")){
             textBtn.setValue("Guardar");
