@@ -24,5 +24,9 @@
             android:id="@+id/nav_contratos"
             android:icon="@android:drawable/ic_input_get"
             android:title="@string/menu_contratos" />
+        <item
+            android:id="@+id/nav_salir"
+            android:icon="?attr/actionModeCloseDrawable"
+            android:title="Cerrar sesión" />
     </group>
 </menu>

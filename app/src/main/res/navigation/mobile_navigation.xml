@@ -81,4 +81,8 @@
             android:id="@+id/action_pagosFragment_to_contratoFragment"
             app:destination="@id/contratoFragment" />
     </fragment>
+    <dialog
+        android:id="@+id/nav_salir"
+        android:name="com.example.tpo1.Salir"
+        android:label="Salir" />
 </navigation>
