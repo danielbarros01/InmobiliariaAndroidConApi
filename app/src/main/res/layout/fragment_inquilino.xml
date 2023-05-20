@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.inquilinos.InquilinoFragment">
+
+    <TextView
+        android:id="@+id/tvLabelInquilino"
+        android:layout_width="146dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Código"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino3"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="212dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="DNI"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino4"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="308dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="E-mail"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino5"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Telefono"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino6"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="416dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Telefono"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino8"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="600dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Telefono garante"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino7"
+        android:layout_width="226dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="512dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Garante"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino2"
+        android:layout_width="229dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="124dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Nombre y Apellido"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvCódigoInquilino"
+        android:layout_width="148dp"
+        android:layout_height="30dp"
+        android:gravity="center"
+        android:text="200"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino"
+        tools:layout_editor_absoluteX="-3dp" />
+
+    <TextView
+        android:id="@+id/tvNombreApellidoInquilino"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Ernesto Jose"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino2"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <TextView
+        android:id="@+id/tvDniInquilino"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="25340699"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino3"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvEmailInquilino"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="luna@mail.com"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino4"
+        tools:layout_editor_absoluteX="-1dp" />
+
+    <TextView
+        android:id="@+id/tvTelefonoInquilino"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="2664253411"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino6"
+        tools:layout_editor_absoluteX="-2dp" />
+
+    <TextView
+        android:id="@+id/tvTelefonoGaranteInquilino"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="2664253411"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino8"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <TextView
+        android:id="@+id/tvNombreGarante"
+        android:layout_width="227dp"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Lucero Roberto"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino7"
+        tools:layout_editor_absoluteX="2dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

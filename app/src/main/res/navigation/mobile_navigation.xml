@@ -33,4 +33,22 @@
             android:id="@+id/action_inmuebleFragment_to_nav_inmuebles"
             app:destination="@id/nav_inmuebles" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_inquilinos"
+        android:name="com.example.tpo1.ui.inquilinos.InquilinosFragment"
+        android:label="Inquilinos"
+        tools:layout="@layout/fragment_inquilinos" >
+        <action
+            android:id="@+id/action_nav_inquilinos_to_inquilinoFragment"
+            app:destination="@id/inquilinoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/inquilinoFragment"
+        android:name="com.example.tpo1.ui.inquilinos.InquilinoFragment"
+        android:label="Inquilino"
+        tools:layout="@layout/fragment_inquilino" >
+        <action
+            android:id="@+id/action_inquilinoFragment_to_nav_inquilinos"
+            app:destination="@id/nav_inquilinos" />
+    </fragment>
 </navigation>
