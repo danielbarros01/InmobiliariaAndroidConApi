@@ -30,7 +30,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino4"
@@ -43,7 +44,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino5"
@@ -56,7 +58,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino6"
@@ -69,7 +72,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino8"
@@ -82,7 +86,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino7"
@@ -95,7 +100,8 @@
         android:textColor="#FFFFFF"
         android:textSize="24sp"
         app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvLabelInquilino2"
@@ -120,7 +126,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino"
-        tools:layout_editor_absoluteX="-3dp" />
+        tools:layout_editor_absoluteX="-3dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvNombreApellidoInquilino"
@@ -132,7 +139,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino2"
-        tools:layout_editor_absoluteX="-1dp" />
+        tools:layout_editor_absoluteX="-1dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvDniInquilino"
@@ -144,7 +152,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino3"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvEmailInquilino"
@@ -156,7 +165,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino4"
-        tools:layout_editor_absoluteX="-1dp" />
+        tools:layout_editor_absoluteX="-1dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvTelefonoInquilino"
@@ -168,7 +178,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino6"
-        tools:layout_editor_absoluteX="-2dp" />
+        tools:layout_editor_absoluteX="-2dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvTelefonoGaranteInquilino"
@@ -180,7 +191,8 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino8"
-        tools:layout_editor_absoluteX="0dp" />
+        tools:layout_editor_absoluteX="0dp"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/tvNombreGarante"
@@ -192,5 +204,6 @@
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino7"
-        tools:layout_editor_absoluteX="2dp" />
+        tools:layout_editor_absoluteX="2dp"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

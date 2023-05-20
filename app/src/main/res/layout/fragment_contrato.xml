@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.contratos.ContratoFragment">
+
+    <TextView
+        android:id="@+id/tvLabelInquilino"
+        android:layout_width="189dp"
+        android:layout_height="31dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="87dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Código contrato"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvFechaInicioContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino3"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="27dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Fecha finalizacion"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvFechaFinalizacionContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvLabelInquilino2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino4"
+        android:layout_width="214dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Monto de alquiler"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvMontoAlquilerContrato"
+        app:layout_constraintStart_toStartOf="@+id/tvMontoAlquilerContrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaFinalizacionContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino6"
+        android:layout_width="178dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="92dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Inquilino"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/tvInmuebleContrato"
+        app:layout_constraintStart_toStartOf="@+id/tvInquilinoContrato"
+        app:layout_constraintTop_toTopOf="@+id/tvLabelInquilino4"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino7"
+        android:layout_width="0dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Inmueble"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/tvInmuebleContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvInmuebleContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInquilinoContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvLabelInquilino2"
+        android:layout_width="211dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="590dp"
+        android:background="@drawable/bordes_derecha_redondeado_plata"
+        android:gravity="center"
+        android:text="Fecha Inicio"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/tvFechaInicioContrato"
+        app:layout_constraintTop_toBottomOf="@+id/tvCodigoContrato" />
+
+    <TextView
+        android:id="@+id/tvCodigoContrato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="29dp"
+        android:gravity="center"
+        android:text="8000"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvLabelInquilino2"
+        app:layout_constraintEnd_toEndOf="@+id/tvLabelInquilino"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvMontoAlquilerContrato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="63dp"
+        android:gravity="center"
+        android:text="$250000"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvInquilinoContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvInquilinoContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaFinalizacionContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvInquilinoContrato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="66dp"
+        android:gravity="center"
+        android:text="Jose Gez"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvInmuebleContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvCodigoContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvMontoAlquilerContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvInmuebleContrato"
+        android:layout_width="326dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginBottom="54dp"
+        android:gravity="center"
+        android:text="Inmueble en Salta 325"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnVerPagos"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInquilinoContrato"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvFechaInicioContrato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="60dp"
+        android:gravity="center"
+        android:text="06/02/2020"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvFechaFinalizacionContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvFechaFinalizacionContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tvFechaFinalizacionContrato"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="56dp"
+        android:gravity="center"
+        android:text="06/02/2021"
+        android:textColor="#313131"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvMontoAlquilerContrato"
+        app:layout_constraintEnd_toEndOf="@+id/tvMontoAlquilerContrato"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvFechaInicioContrato"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/btnVerPagos"
+        android:layout_width="211dp"
+        android:layout_height="60dp"
+        android:layout_marginBottom="82dp"
+        android:text="Ver Pagos"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvInmuebleContrato" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -51,4 +51,34 @@
             android:id="@+id/action_inquilinoFragment_to_nav_inquilinos"
             app:destination="@id/nav_inquilinos" />
     </fragment>
+    <fragment
+        android:id="@+id/nav_contratos"
+        android:name="com.example.tpo1.ui.contratos.ContratosFragment"
+        android:label="Contratos"
+        tools:layout="@layout/fragment_contratos" >
+        <action
+            android:id="@+id/action_nav_contratos_to_contratoFragment"
+            app:destination="@id/contratoFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/contratoFragment"
+        android:name="com.example.tpo1.ui.contratos.ContratoFragment"
+        android:label="Contrato"
+        tools:layout="@layout/fragment_contrato" >
+        <action
+            android:id="@+id/action_contratoFragment_to_nav_contratos"
+            app:destination="@id/nav_contratos" />
+        <action
+            android:id="@+id/action_contratoFragment_to_pagosFragment"
+            app:destination="@id/pagosFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pagosFragment"
+        android:name="com.example.tpo1.ui.contratos.PagosFragment"
+        android:label="Pagos"
+        tools:layout="@layout/fragment_pagos" >
+        <action
+            android:id="@+id/action_pagosFragment_to_contratoFragment"
+            app:destination="@id/contratoFragment" />
+    </fragment>
 </navigation>
