@@ -27,7 +27,7 @@
     <fragment
         android:id="@+id/inmuebleFragment"
         android:name="com.example.tpo1.ui.inmuebles.InmuebleFragment"
-        android:label="fragment_inmueble"
+        android:label="Inmueble"
         tools:layout="@layout/fragment_inmueble" >
         <action
             android:id="@+id/action_inmuebleFragment_to_nav_inmuebles"

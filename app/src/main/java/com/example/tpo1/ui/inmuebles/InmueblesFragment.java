@@ -15,7 +15,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.example.tpo1.R;
 import com.example.tpo1.databinding.FragmentInmueblesBinding;
 import com.example.tpo1.modelo.Inmueble;
 

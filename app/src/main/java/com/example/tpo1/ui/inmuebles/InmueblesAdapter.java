@@ -46,7 +46,7 @@ public class InmueblesAdapter extends RecyclerView.Adapter<InmueblesAdapter.View
                 .into(holder.fotoInmueble);
 
         holder.direccion.setText(inmuebles.get(position).getDireccion());
-        holder.precio.setText(String.valueOf(inmuebles.get(position).getPrecio()));
+        holder.precio.setText("$" + inmuebles.get(position).getPrecio());
 
     }
 
@@ -55,7 +55,7 @@ public class InmueblesAdapter extends RecyclerView.Adapter<InmueblesAdapter.View
         return inmuebles.size();
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder{
+    public class ViewHolder extends RecyclerView.ViewHolder {
         ImageView fotoInmueble;
         TextView direccion, precio;
 
@@ -69,6 +69,8 @@ public class InmueblesAdapter extends RecyclerView.Adapter<InmueblesAdapter.View
                 @Override
                 public void onClick(View view) {
                     Bundle bundle = new Bundle();
+                    Inmueble inmueble = inmuebles.get(getAdapterPosition());//acceder al elemento en inmuebles en la posición obtenida del getAdapterPosition(). Esto devuelve el objeto Inmueble en la posición actual del adaptador.
+                    bundle.putSerializable("inmueble", inmueble);
                     Navigation.findNavController(view).navigate(R.id.inmuebleFragment, bundle);
                 }
             });
