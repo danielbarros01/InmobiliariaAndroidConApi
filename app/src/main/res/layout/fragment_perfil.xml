@@ -127,50 +127,6 @@
         android:textSize="24sp" />
 
     <TextView
-        android:id="@+id/tvLabel5"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="E-mail"
-        android:textColor="#B2CCFF"
-        android:textSize="22sp" />
-
-    <EditText
-        android:id="@+id/etEmailProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#B6B0B0"
-        android:ems="10"
-        android:enabled="false"
-        android:inputType="textPersonName"
-        android:padding="10dp"
-        android:text="dani@hotmail.com"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp" />
-
-    <TextView
-        android:id="@+id/tvLabel6"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Contraseña"
-        android:textColor="#B2CCFF"
-        android:textSize="22sp" />
-
-    <EditText
-        android:id="@+id/etPassProfile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
-        android:backgroundTint="#B6B0B0"
-        android:ems="10"
-        android:enabled="false"
-        android:inputType="textPersonName|textPassword"
-        android:padding="10dp"
-        android:text="aaa"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp" />
-
-    <TextView
         android:id="@+id/tvLabel7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -191,6 +147,17 @@
         android:text="26645456"
         android:textColor="#FFFFFF"
         android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnEditarPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="30dp"
+        android:backgroundTint="#83002F8C"
+        android:text="Editar Contraseña"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/btnPerfil"

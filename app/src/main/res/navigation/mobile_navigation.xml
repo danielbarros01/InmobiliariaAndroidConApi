@@ -14,7 +14,11 @@
         android:id="@+id/nav_perfil"
         android:name="com.example.tpo1.ui.perfil.PerfilFragment"
         android:label="@string/menu_perfil"
-        tools:layout="@layout/fragment_perfil" />
+        tools:layout="@layout/fragment_perfil" >
+        <action
+            android:id="@+id/action_nav_perfil_to_passwordFragment"
+            app:destination="@id/passwordFragment" />
+    </fragment>
     <fragment
         android:id="@+id/nav_inmuebles"
         android:name="com.example.tpo1.ui.inmuebles.InmueblesFragment"
@@ -85,4 +89,13 @@
         android:id="@+id/nav_salir"
         android:name="com.example.tpo1.Salir"
         android:label="Salir" />
+    <fragment
+        android:id="@+id/passwordFragment"
+        android:name="com.example.tpo1.ui.perfil.PasswordFragment"
+        android:label="Editar contraseña"
+        tools:layout="@layout/fragment_password" >
+        <action
+            android:id="@+id/action_passwordFragment_to_nav_perfil"
+            app:destination="@id/nav_perfil" />
+    </fragment>
 </navigation>

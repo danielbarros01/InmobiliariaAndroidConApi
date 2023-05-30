@@ -3,11 +3,13 @@ package com.example.tpo1.ui.perfil;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,8 +26,8 @@ public class PerfilFragment extends Fragment {
 
     private FragmentPerfilBinding binding;
     private PerfilViewModel vm;
-    private EditText etDni, etNombre, etApellido, etEmail, etPass, etTelefono;
-    private Button button;
+    private EditText etDni, etNombre, etApellido, etTelefono;
+    private Button button, btnEditarPass;
 
     public static PerfilFragment newInstance() {
         return new PerfilFragment();
@@ -58,8 +60,6 @@ public class PerfilFragment extends Fragment {
                 etDni.setText(propietario.getDni().toString());
                 etNombre.setText(propietario.getNombre());
                 etApellido.setText(propietario.getApellido());
-                etEmail.setText(propietario.getEmail());
-                etPass.setText(propietario.getContraseña());
                 etTelefono.setText(propietario.getTelefono());
             }
         });
@@ -70,8 +70,6 @@ public class PerfilFragment extends Fragment {
                 etDni.setEnabled(b);
                 etNombre.setEnabled(b);
                 etApellido.setEnabled(b);
-                etEmail.setEnabled(b);
-                etPass.setEnabled(b);
                 etTelefono.setEnabled(b);
             }
         });
@@ -88,10 +86,9 @@ public class PerfilFragment extends Fragment {
         etDni = binding.etDni;
         etNombre = binding.etNombre;
         etApellido = binding.etApellido;
-        etEmail = binding.etEmailProfile;
-        etPass = binding.etPassProfile;
         etTelefono = binding.etTelefono;
         button = binding.btnPerfil;
+        btnEditarPass = binding.btnEditarPass;
     }
 
     private void listenerButton(){
@@ -102,15 +99,20 @@ public class PerfilFragment extends Fragment {
                 vm.editarOGuardar(textoBtn, crearPropietario());
             }
         });
+
+        btnEditarPass.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Navigation.findNavController(view).navigate(R.id.passwordFragment);
+            }
+        });
     }
 
     private Propietario crearPropietario() {
         Propietario propietario = new Propietario();
-        propietario.setDni(Long.parseLong(etDni.getText().toString()));
+        propietario.setDni(etDni.getText().toString());
         propietario.setNombre(etNombre.getText().toString());
         propietario.setApellido(etApellido.getText().toString());
-        propietario.setEmail(etEmail.getText().toString());
-        propietario.setContraseña(etPass.getText().toString());
         propietario.setTelefono(etTelefono.getText().toString());
 
         return propietario;

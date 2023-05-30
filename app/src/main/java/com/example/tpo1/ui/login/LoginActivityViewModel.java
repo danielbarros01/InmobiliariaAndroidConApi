@@ -10,29 +10,54 @@ import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 
 import com.example.tpo1.MainActivity;
-import com.example.tpo1.modelo.Propietario;
-import com.example.tpo1.request.ApiClient;
+import com.example.tpo1.modelo.LoginView;
+import com.example.tpo1.request.ApiClientRetrofit;
+import com.example.tpo1.request.SpToken;
+
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
 public class LoginActivityViewModel extends AndroidViewModel {
     private Context context;
-    private ApiClient api;
+    private ApiClientRetrofit.EndPointsInmobiliaria api;
 
     public LoginActivityViewModel(@NonNull Application application) {
         super(application);
-        api = ApiClient.getApi();
+        api = ApiClientRetrofit.getApi();
         this.context = application.getApplicationContext();
     }
 
     public void login(String email, String password) {
         try {
-            Propietario p = api.login(email, password);
+            LoginView usuario = new LoginView(email, password);
 
-            if (p != null) {
-                Toast.makeText(context, "Iniciando sesion", Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(context, MainActivity.class);
-                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                intent.putExtra("login", true);
-                context.startActivity(intent);
+            if (usuario != null) {
+                Call<String> call = api.login(usuario);
+                call.enqueue(new Callback<String>() {
+                    @Override
+                    public void onResponse(Call<String> call, Response<String> response) {
+                        if(response.isSuccessful()) {
+                            if(response.body() != null) {
+                                SpToken.guardarToken(context, response.body());
+
+                                Intent intent = new Intent(context, MainActivity.class);
+                                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                                intent.putExtra("login", true);
+                                context.startActivity(intent);
+                            }
+                        }else{
+                            Toast.makeText(context, "Algun dato es incorrecto", Toast.LENGTH_LONG).show();
+                            Log.d("Salida", response.message());
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<String> call, Throwable t) {
+                        Toast.makeText(context, "Algo salio mal, vuelve a intentar más tarde", Toast.LENGTH_LONG).show();
+                        Log.d("salida", t.getMessage());
+                    }
+                });
             } else {
                 Toast.makeText(context, "Propietario incorrecto o inexistente", Toast.LENGTH_LONG).show();
             }
