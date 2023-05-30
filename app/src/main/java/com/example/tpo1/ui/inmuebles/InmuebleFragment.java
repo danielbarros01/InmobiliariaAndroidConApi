@@ -73,8 +73,8 @@ public class InmuebleFragment extends Fragment {
 
                 tvPrecio.setText("$" + inmueble.getPrecio());
                 tvDireccion.setText(inmueble.getDireccion());
-                tvCodigo.setText(String.valueOf(inmueble.getIdInmueble()));
-                tvTipo.setText(inmueble.getTipo());
+                tvCodigo.setText(String.valueOf(inmueble.getId()));
+                tvTipo.setText(inmueble.getTipo().getTipo());
                 tvAmbientes.setText(String.valueOf(inmueble.getAmbientes()));
                 tvUso.setText(inmueble.getUso());
                 cbEstado.setChecked(inmueble.isEstado());

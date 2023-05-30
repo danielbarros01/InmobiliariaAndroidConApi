@@ -1,10 +1,13 @@
 package com.example.tpo1.request;
 
+import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.modelo.PasswordsPropietario;
 import com.example.tpo1.modelo.Propietario;
 import com.example.tpo1.modelo.LoginView;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+
+import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Retrofit;
@@ -43,5 +46,8 @@ public class ApiClientRetrofit {
 
         @PUT("propietarios/perfil/password")
         Call<Void> editarPassword(@Header("Authorization") String token, @Body PasswordsPropietario passwords);
+
+        @GET("inmuebles/de")
+        Call<List<Inmueble>> obtenerInmuebles(@Header("Authorization") String token);
     }
 }

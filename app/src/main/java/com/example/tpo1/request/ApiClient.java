@@ -137,25 +137,25 @@ public class ApiClient {
         inquilinos.add(mario);
 
         //Inmuebles
-        Inmueble salon = new Inmueble(501, "Colon 340", "comercial", "salon", 2, 20000, juan, true, "http://www.secsanluis.com.ar/servicios/salon1.jpg");
+        /*Inmueble salon = new Inmueble(501, "Colon 340", "comercial", "salon", 2, 20000, juan, true, "http://www.secsanluis.com.ar/servicios/salon1.jpg");
         Inmueble casa = new Inmueble(502, "Mitre 800", "particular", "casa", 2, 15000, juan, true, "http://www.secsanluis.com.ar/servicios/casa1.jpg");
         Inmueble otraCasa = new Inmueble(503, "Salta 325", "particular", "casa", 3, 17000, sonia, true, "http://www.secsanluis.com.ar/servicios/casa2.jpg");
         Inmueble dpto = new Inmueble(504, "Lavalle 450", "particular", "dpto", 2, 25000, sonia, true, "http://www.secsanluis.com.ar/servicios/departamento1.jpg");
         Inmueble casita = new Inmueble(505, "Belgrano 218", "particular", "casa", 5, 90000, sonia, true, "http://www.secsanluis.com.ar/servicios/casa3.jpg");
-
-        inmuebles.add(salon);
+*/
+        /*inmuebles.add(salon);
         inmuebles.add(casa);
         inmuebles.add(otraCasa);
         inmuebles.add(dpto);
-        inmuebles.add(casita);
+        inmuebles.add(casita);*/
 
         //Contratos
-        Contrato uno = new Contrato(701, "05/08/2020", "05/08/2023", 17000, mario, otraCasa);
-        contratos.add(uno);
+        /*Contrato uno = new Contrato(701, "05/08/2020", "05/08/2023", 17000, mario, otraCasa);
+        contratos.add(uno);*/
         //Pagos
-        pagos.add(new Pago(900, 1, uno, 17000, "10/08/2020"));
+        /*pagos.add(new Pago(900, 1, uno, 17000, "10/08/2020"));
         pagos.add(new Pago(901, 2, uno, 17000, "10/09/2020"));
-        pagos.add(new Pago(902, 3, uno, 17000, "10/10/2020"));
+        pagos.add(new Pago(902, 3, uno, 17000, "10/10/2020"));*/
 
 
     }
