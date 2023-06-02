@@ -8,10 +8,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.MutableLiveData;
-import androidx.lifecycle.ViewModel;
 
 import com.example.tpo1.modelo.Propietario;
-import com.example.tpo1.request.ApiClient;
 import com.example.tpo1.request.ApiClientRetrofit;
 import com.example.tpo1.request.SpToken;
 

@@ -11,7 +11,6 @@ import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
 import com.example.tpo1.modelo.Propietario;
-import com.example.tpo1.request.ApiClient;
 import com.example.tpo1.request.ApiClientRetrofit;
 import com.example.tpo1.request.SpToken;
 

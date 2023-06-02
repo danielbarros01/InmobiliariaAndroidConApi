@@ -1,15 +1,10 @@
 package com.example.tpo1;
 
 import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.view.Menu;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.tpo1.modelo.Propietario;
-import com.example.tpo1.request.ApiClient;
-import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.lifecycle.Observer;
@@ -29,7 +24,6 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MainActivityViewModel vm;
 
-    //private ImageView fotoPerfil;
     private TextView name, email;
 
     @Override
@@ -82,7 +76,6 @@ public class MainActivity extends AppCompatActivity {
     private void cargarWidgets(){
         name = binding.navView.getHeaderView(0).findViewById(R.id.tvNameNavHeader);
         email = binding.navView.getHeaderView(0).findViewById(R.id.tvEmailNavHeader);
-        //fotoPerfil = binding.navView.getHeaderView(0).findViewById(R.id.ivNavHeader);
     }
 
     private void cargarDatosUsuario(){
