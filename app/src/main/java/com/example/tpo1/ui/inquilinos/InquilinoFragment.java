@@ -17,6 +17,7 @@ import android.widget.TextView;
 import com.example.tpo1.R;
 import com.example.tpo1.databinding.FragmentInquilinoBinding;
 import com.example.tpo1.databinding.FragmentInquilinosBinding;
+import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.modelo.Inquilino;
 
@@ -46,8 +47,8 @@ public class InquilinoFragment extends Fragment {
         observers();
 
         Bundle bundle = getArguments();
-        Inmueble i= (Inmueble) bundle.getSerializable("inmueble");
-        vm.traerInquilino(i);
+        Contrato c= (Contrato) bundle.getSerializable("contrato");
+        vm.traerInquilino(c);
     }
 
     private void iniciarWidgets(){

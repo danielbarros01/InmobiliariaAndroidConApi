@@ -48,8 +48,8 @@ public class ContratoFragment extends Fragment {
         observers();
 
         Bundle bundle = getArguments();
-        Inmueble i = (Inmueble) bundle.getSerializable("inmueble");
-        vm.traerContrato(i);
+        Contrato c = (Contrato) bundle.getSerializable("contrato");
+        vm.setContrato(c);
     }
 
     private void iniciarWidgets() {

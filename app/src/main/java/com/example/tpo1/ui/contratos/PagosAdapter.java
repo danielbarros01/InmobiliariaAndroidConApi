@@ -12,6 +12,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.tpo1.R;
+import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.modelo.Pago;
 
@@ -37,11 +38,10 @@ public class PagosAdapter extends RecyclerView.Adapter<PagosAdapter.ViewHolder>{
 
     @Override
     public void onBindViewHolder(@NonNull PagosAdapter.ViewHolder holder, int position) {
-        holder.codigoPago.setText(String.valueOf(pagos.get(position).getIdPago()));
-        holder.numeroPago.setText(String.valueOf(pagos.get(position).getNumero()));
-        holder.codigoContrato.setText(String.valueOf(pagos.get(position).getContrato().getIdContrato()));
-        holder.importe.setText(String.valueOf(pagos.get(position).getImporte()));
-        holder.fechaPago.setText(pagos.get(position).getFechaDePago());
+        holder.numeroPago.setText(String.valueOf(pagos.get(position).getNumeroPago()));
+        holder.codigoContrato.setText(String.valueOf(pagos.get(position).getContratoId()));
+        holder.importe.setText(String.valueOf(pagos.get(position).getContrato().getMontoAlquiler()));
+        holder.fechaPago.setText(pagos.get(position).getFecha());
     }
 
     @Override

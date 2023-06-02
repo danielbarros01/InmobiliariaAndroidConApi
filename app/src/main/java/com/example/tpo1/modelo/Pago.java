@@ -1,39 +1,44 @@
 package com.example.tpo1.modelo;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 public class Pago implements Serializable {
 
-    private int idPago;
-    private int numero;
+    private int numeroPago;
+    private int contratoId;
+
+    @SerializedName("contrato")
     private Contrato contrato;
-    private double importe;
-    private String fechaDePago;
+    private String fecha;
 
     public Pago() {}
 
-    public Pago(int idPago, int numero, Contrato contrato, double importe, String fechaDePago) {
-        this.idPago = idPago;
-        this.numero = numero;
+    public Pago(int numeroPago, int contratoId, Contrato contrato, String fecha) {
+        this.numeroPago = numeroPago;
+        this.contratoId = contratoId;
         this.contrato = contrato;
-        this.importe = importe;
-        this.fechaDePago = fechaDePago;
+        this.fecha = fecha;
     }
 
-    public int getIdPago() {
-        return idPago;
+    public int getNumeroPago() {
+        return numeroPago;
     }
 
-    public void setIdPago(int idPago) {
-        this.idPago = idPago;
+    public void setNumeroPago(int numeroPago) {
+        this.numeroPago = numeroPago;
     }
 
-    public int getNumero() {
-        return numero;
+    public int getContratoId() {
+        return contratoId;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setContratoId(int contratoId) {
+        this.contratoId = contratoId;
     }
 
     public Contrato getContrato() {
@@ -44,19 +49,20 @@ public class Pago implements Serializable {
         this.contrato = contrato;
     }
 
-    public double getImporte() {
-        return importe;
+    public String getFecha() {
+        try {
+            SimpleDateFormat inputFormat = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss");
+            Date date = inputFormat.parse(fecha);
+
+            SimpleDateFormat outputFormat = new SimpleDateFormat("yyyy-MM-dd");
+            return outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+            return fecha;
+        }
     }
 
-    public void setImporte(double importe) {
-        this.importe = importe;
-    }
-
-    public String getFechaDePago() {
-        return fechaDePago;
-    }
-
-    public void setFechaDePago(String fechaDePago) {
-        this.fechaDePago = fechaDePago;
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
     }
 }

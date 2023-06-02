@@ -24,7 +24,7 @@ public class ContratoViewModel extends ViewModel {
         return contrato;
     }
 
-    public void traerContrato(Inmueble in){
-        contrato.setValue(api.obtenerContratoVigente(in));
+    public void setContrato(Contrato c){
+        contrato.setValue(c);
     }
 }

@@ -18,6 +18,7 @@ import android.view.ViewGroup;
 import com.example.tpo1.R;
 import com.example.tpo1.databinding.FragmentInmueblesBinding;
 import com.example.tpo1.databinding.FragmentInquilinosBinding;
+import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.ui.inmuebles.InmueblesAdapter;
 
@@ -45,13 +46,13 @@ public class InquilinosFragment extends Fragment {
         vm = new ViewModelProvider(this).get(InquilinosViewModel.class);
         vm.setInmuebles();
 
-        vm.getInmuebles().observe(this, new Observer<List<Inmueble>>() {
+        vm.getInmuebles().observe(this, new Observer<List<Contrato>>() {
             @Override
-            public void onChanged(List<Inmueble> inmuebles) {
+            public void onChanged(List<Contrato> contratos) {
                 RecyclerView rv = binding.rvInmueblesAlquilados;
                 GridLayoutManager grilla = new GridLayoutManager(getContext(), 2, GridLayoutManager.VERTICAL, false);
                 rv.setLayoutManager(grilla);
-                InquilinosAdapter adapter = new InquilinosAdapter(getContext(), inmuebles, getLayoutInflater());
+                InquilinosAdapter adapter = new InquilinosAdapter(getContext(), contratos, getLayoutInflater());
                 rv.setAdapter(adapter);
             }
         });

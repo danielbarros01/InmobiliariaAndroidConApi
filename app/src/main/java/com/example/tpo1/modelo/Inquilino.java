@@ -4,8 +4,8 @@ import java.io.Serializable;
 
 public class Inquilino implements Serializable {
 
-    private int idInquilino;
-    private Long DNI;
+    private int id;
+    private Long dni;
     private String nombre;
     private String apellido;
     private String lugarDeTrabajo;
@@ -17,8 +17,8 @@ public class Inquilino implements Serializable {
     public Inquilino() {}
 
     public Inquilino(int idInquilino, Long DNI, String nombre, String apellido, String lugarDeTrabajo, String email, String telefono, String nombreGarante, String telefonoGarante) {
-        this.idInquilino = idInquilino;
-        this.DNI = DNI;
+        this.id = idInquilino;
+        this.dni = DNI;
         this.nombre = nombre;
         this.apellido = apellido;
         this.lugarDeTrabajo = lugarDeTrabajo;
@@ -29,19 +29,19 @@ public class Inquilino implements Serializable {
     }
 
     public int getIdInquilino() {
-        return idInquilino;
+        return id;
     }
 
     public void setIdInquilino(int idInquilino) {
-        this.idInquilino = idInquilino;
+        this.id = idInquilino;
     }
 
     public Long getDNI() {
-        return DNI;
+        return dni;
     }
 
     public void setDNI(Long DNI) {
-        this.DNI = DNI;
+        this.dni = DNI;
     }
 
     public String getNombre() {

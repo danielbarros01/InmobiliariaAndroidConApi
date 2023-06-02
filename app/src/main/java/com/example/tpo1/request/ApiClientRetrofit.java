@@ -1,6 +1,9 @@
 package com.example.tpo1.request;
 
+import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
+import com.example.tpo1.modelo.Inquilino;
+import com.example.tpo1.modelo.Pago;
 import com.example.tpo1.modelo.PasswordsPropietario;
 import com.example.tpo1.modelo.Propietario;
 import com.example.tpo1.modelo.LoginView;
@@ -49,5 +52,14 @@ public class ApiClientRetrofit {
 
         @GET("inmuebles/de")
         Call<List<Inmueble>> obtenerInmuebles(@Header("Authorization") String token);
+
+        @GET("contratos/vigentes")
+        Call<List<Contrato>> obtenerContratosVigentes(@Header("Authorization") String token);
+
+        @GET("contratos/{contratoId}/inquilino")
+        Call<Inquilino> obtenerInquilinoDeContrato(@Header("Authorization") String token, @Path("contratoId") int contratoId);
+
+        @GET("contratos/{contratoId}/pagos")
+        Call<List<Pago>> obtenerPagos(@Header("Authorization") String token, @Path("contratoId") int contratoId);
     }
 }

@@ -1,30 +1,72 @@
 package com.example.tpo1.ui.contratos;
 
+import android.app.Application;
+import android.content.Context;
+import android.util.Log;
+import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.lifecycle.AndroidViewModel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 import androidx.lifecycle.ViewModel;
 
+import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.request.ApiClient;
+import com.example.tpo1.request.ApiClientRetrofit;
+import com.example.tpo1.request.SpToken;
 
 import java.util.List;
 
-public class ContratosViewModel extends ViewModel {
-    private MutableLiveData<List<Inmueble>> inmueblesAlquilados;
-    private ApiClient api = ApiClient.getApi();
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
 
-    public ContratosViewModel() {
-        inmueblesAlquilados = new MutableLiveData<>();
+public class ContratosViewModel extends AndroidViewModel {
+    private Context context;
+    private ApiClientRetrofit.EndPointsInmobiliaria api;
+    private String token;
+    private MutableLiveData<List<Contrato>> contratosVigentes;
+
+    public ContratosViewModel(@NonNull Application application) {
+        super(application);
+
+        context = application.getApplicationContext();
+        api = ApiClientRetrofit.getApi();
+        token = SpToken.leerToken(context);
+        contratosVigentes = new MutableLiveData<>();
     }
 
-    public LiveData<List<Inmueble>> getInmuebles() {
-        if(inmueblesAlquilados == null){
-            inmueblesAlquilados = new MutableLiveData<>();
+
+    public LiveData<List<Contrato>> getInmuebles() {
+        if(contratosVigentes == null){
+            contratosVigentes = new MutableLiveData<>();
         }
-        return inmueblesAlquilados;
+        return contratosVigentes;
     }
 
     public void setInmuebles() {
-        inmueblesAlquilados.setValue(api.obtenerPropiedadesAlquiladas());
+        Call<List<Contrato>> call = api.obtenerContratosVigentes(token);
+
+        call.enqueue(new Callback<List<Contrato>>() {
+            @Override
+            public void onResponse(Call<List<Contrato>> call, Response<List<Contrato>> response) {
+                if(response.isSuccessful()){
+                    if(response.body() != null){
+                        contratosVigentes.setValue(response.body());
+                    }
+                }else{
+                    Log.d("Error al obtener respuesta", response.message());
+                }
+            }
+
+            @Override
+            public void onFailure(Call<List<Contrato>> call, Throwable t) {
+                Toast.makeText(context, "Algo salio mal al intentar obtener los inmuebles con contratos vigentes", Toast.LENGTH_LONG).show();
+                Log.d("salida", t.getMessage());
+            }
+        });
+
     }
 }
