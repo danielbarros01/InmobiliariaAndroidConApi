@@ -1,5 +1,7 @@
 package com.example.tpo1.modelo;
 
+import com.google.gson.annotations.SerializedName;
+
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -13,7 +15,9 @@ public class Inmueble implements Serializable {
     private double precio;
     private Propietario propietario;
     private boolean disponible;
-    private String urlImagen;
+
+
+    private String imagenRuta;
 
     public Inmueble(int id, String direccion, String usoNombre, TipoInmueble tipo, int ambientes, double precio, Propietario propietario, boolean estado, String imagen) {
         this.id = id;
@@ -24,7 +28,7 @@ public class Inmueble implements Serializable {
         this.precio = precio;
         this.propietario = propietario;
         this.disponible = estado;
-        this.urlImagen = imagen;
+        this.imagenRuta = imagen;
     }
     public Inmueble() {
 
@@ -94,11 +98,11 @@ public class Inmueble implements Serializable {
     }
 
     public String getImagen() {
-        return urlImagen;
+        return imagenRuta;
     }
 
     public void setImagen(String imagen) {
-        this.urlImagen = imagen;
+        this.imagenRuta = imagen;
     }
 
     @Override

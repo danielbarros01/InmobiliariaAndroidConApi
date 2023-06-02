@@ -19,6 +19,7 @@ import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.tpo1.Config;
 import com.example.tpo1.databinding.FragmentInmuebleBinding;
 import com.example.tpo1.modelo.Inmueble;
 
@@ -67,7 +68,7 @@ public class InmuebleFragment extends Fragment {
                 inmueble = i;
 
                 Glide.with(getContext())
-                        .load(inmueble.getImagen())
+                        .load(Config.API_URL + inmueble.getImagen())
                         .diskCacheStrategy(DiskCacheStrategy.ALL)
                         .into(imagenInmueble);
 

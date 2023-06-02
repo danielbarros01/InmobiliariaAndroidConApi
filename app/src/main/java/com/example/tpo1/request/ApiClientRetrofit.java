@@ -1,5 +1,6 @@
 package com.example.tpo1.request;
 
+import com.example.tpo1.Config;
 import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
 import com.example.tpo1.modelo.Inquilino;
@@ -18,8 +19,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 import retrofit2.http.*;
 
 public class ApiClientRetrofit {
-
-    private static final String PATH = "http://192.168.0.103:5029/api/";
+    private static final String PATH = Config.API_URL + "api/";
 
     private static EndPointsInmobiliaria endPointsInmobiliaria;
 
@@ -53,6 +53,9 @@ public class ApiClientRetrofit {
         @GET("inmuebles/de")
         Call<List<Inmueble>> obtenerInmuebles(@Header("Authorization") String token);
 
+        @PATCH("inmuebles/{id}")
+        Call<Void> actualizarEstadoInmueble(@Header("Authorization") String token, @Path("id") int id, @Query("disponible") boolean disponible);
+
         @GET("contratos/vigentes")
         Call<List<Contrato>> obtenerContratosVigentes(@Header("Authorization") String token);
 
@@ -61,5 +64,6 @@ public class ApiClientRetrofit {
 
         @GET("contratos/{contratoId}/pagos")
         Call<List<Pago>> obtenerPagos(@Header("Authorization") String token, @Path("contratoId") int contratoId);
+
     }
 }

@@ -16,6 +16,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
+import com.example.tpo1.Config;
 import com.example.tpo1.R;
 import com.example.tpo1.modelo.Contrato;
 import com.example.tpo1.modelo.Inmueble;
@@ -44,7 +45,7 @@ public class ContratosAdapter extends RecyclerView.Adapter<ContratosAdapter.View
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
         Glide.with(context)
-                .load(contratos.get(position).getInmueble().getImagen())
+                .load(Config.API_URL + contratos.get(position).getInmueble().getImagen())
                 .diskCacheStrategy(DiskCacheStrategy.ALL)
                 .into(holder.fotoInmueble);
 

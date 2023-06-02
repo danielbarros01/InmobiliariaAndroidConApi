@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private MainActivityViewModel vm;
 
-    private ImageView fotoPerfil;
+    //private ImageView fotoPerfil;
     private TextView name, email;
 
     @Override
@@ -82,7 +82,7 @@ public class MainActivity extends AppCompatActivity {
     private void cargarWidgets(){
         name = binding.navView.getHeaderView(0).findViewById(R.id.tvNameNavHeader);
         email = binding.navView.getHeaderView(0).findViewById(R.id.tvEmailNavHeader);
-        fotoPerfil = binding.navView.getHeaderView(0).findViewById(R.id.ivNavHeader);
+        //fotoPerfil = binding.navView.getHeaderView(0).findViewById(R.id.ivNavHeader);
     }
 
     private void cargarDatosUsuario(){
@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity {
             public void onChanged(Propietario propietario) {
                 name.setText(propietario.getNombre() + " " +propietario.getApellido());
                 email.setText(propietario.getEmail());
-                fotoPerfil.setImageResource(propietario.getAvatar());
+                //fotoPerfil.setImageResource(propietario.getAvatar());
             }
         });
     }
