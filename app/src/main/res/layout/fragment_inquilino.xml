@@ -76,34 +76,6 @@
         tools:ignore="MissingConstraints" />
 
     <TextView
-        android:id="@+id/tvLabelInquilino8"
-        android:layout_width="226dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="600dp"
-        android:background="@drawable/bordes_derecha_redondeado_plata"
-        android:gravity="center"
-        android:text="Telefono garante"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tvLabelInquilino7"
-        android:layout_width="226dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="512dp"
-        android:background="@drawable/bordes_derecha_redondeado_plata"
-        android:gravity="center"
-        android:text="Garante"
-        android:textColor="#FFFFFF"
-        android:textSize="24sp"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:layout_editor_absoluteX="-2dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
         android:id="@+id/tvLabelInquilino2"
         android:layout_width="229dp"
         android:layout_height="35dp"
@@ -181,29 +153,4 @@
         tools:layout_editor_absoluteX="-2dp"
         tools:ignore="MissingConstraints" />
 
-    <TextView
-        android:id="@+id/tvTelefonoGaranteInquilino"
-        android:layout_width="227dp"
-        android:layout_height="35dp"
-        android:gravity="center"
-        android:text="2664253411"
-        android:textColor="#313131"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino8"
-        tools:layout_editor_absoluteX="0dp"
-        tools:ignore="MissingConstraints" />
-
-    <TextView
-        android:id="@+id/tvNombreGarante"
-        android:layout_width="227dp"
-        android:layout_height="35dp"
-        android:gravity="center"
-        android:text="Lucero Roberto"
-        android:textColor="#313131"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@+id/tvLabelInquilino7"
-        tools:layout_editor_absoluteX="2dp"
-        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

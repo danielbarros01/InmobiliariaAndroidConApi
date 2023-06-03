@@ -7,11 +7,9 @@ import com.example.tpo1.modelo.Contrato;
 
 public class ContratoViewModel extends ViewModel {
     private MutableLiveData<Contrato> contrato;
-    private ApiClient api;
 
     public ContratoViewModel() {
         contrato = new MutableLiveData<>();
-        api = ApiClient.getApi();
     }
 
     public MutableLiveData<Contrato> getContrato() {

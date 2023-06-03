@@ -25,7 +25,7 @@ public class InquilinoFragment extends Fragment {
 
     private FragmentInquilinoBinding binding;
     private InquilinoViewModel vm;
-    private TextView codigo, nombreYApellido, dni, mail, telefono, garante, telefonoGarante;
+    private TextView codigo, nombreYApellido, dni, mail, telefono;
 
     public static InquilinoFragment newInstance() {
         return new InquilinoFragment();
@@ -57,8 +57,6 @@ public class InquilinoFragment extends Fragment {
         dni = binding.tvDniInquilino;
         mail = binding.tvEmailInquilino;
         telefono = binding.tvTelefonoInquilino;
-        garante = binding.tvNombreGarante;
-        telefonoGarante = binding.tvTelefonoGaranteInquilino;
     }
 
     private void observers(){
@@ -70,8 +68,6 @@ public class InquilinoFragment extends Fragment {
                 dni.setText(String.valueOf(i.getDNI()));
                 mail.setText(i.getEmail());
                 telefono.setText(i.getTelefono());
-                garante.setText(i.getNombreGarante());
-                telefonoGarante.setText(i.getTelefonoGarante());
             }
         });
     }
